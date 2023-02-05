@@ -1,0 +1,31 @@
+
+
+installation with Tailwind CLI 
+01 >> nodejs virsion 13 up
+02 >> npm  init -y
+03 >> npm i -D tailwindcss
+04 >> npx tailwindcss init 
+05 >> folder >> src >> css & js 
+06 >> folder >> src >> css >file >> tailwind.css 
+07 >> in tailwind.css  file
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+07 >> create folder >> public > file >> index.html	
+08 >> configer package.json file script
+	        "start": "tailwindcss -i ./src/css/tailwind.css -o ./public/style.css --watch"
+
+09 link output css file - style.css file in index.html
+
+10 >> which folder are watching this configuration will be on the tailwind.config.js file
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./public/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
